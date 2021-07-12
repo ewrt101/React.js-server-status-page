@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Modal from './Modal';
 import Backdrop from './Backdrop';
 
+import classes from './Cards.module.css';
+
 
 function Card(props) {
     const [ modalIsOpen, setModalIsOpen] = useState(false);
@@ -20,9 +22,9 @@ function Card(props) {
 
 
     return (
-        <div className='card'>
+        <div className={classes.card}>
             <h2>{props.title}</h2>
-            <div className='actions'>
+            <div className={classes.actions}>
                 <button className='btn' onClick={runHandler}>Run</button>
             </div>
 
