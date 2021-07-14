@@ -26,24 +26,24 @@ h2 {
     padding: 0.5rem 1.5rem;
     cursor: pointer;
     border-radius: 4px;
-    background-color: #800040;
+    background-color: #424242;
     color: white;
-    border: 1px solid #800040;
+    border: 1px solid #424242;
     margin: 0 1rem;
   }
   
   .btn:hover {
-    background-color: #9c1458;
-    border-color: #9c1458;
+    background-color: #696969;
+    border-color: #696969;
   }
   
   .btn--alt {
     background-color: transparent;
-    color: #800040;
+    color: #424242;
   }
   
   .btn--alt:hover {
-    background-color: #f8dae9;
+    background-color: #ffffff;
   }
   
   .modal {

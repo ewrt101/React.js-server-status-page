@@ -1,4 +1,4 @@
-import Card from "../components/Card.js";
+import Card from "../components/launch/Card.js";
 
 import classes from './LaunchPage.module.css';
 
@@ -21,22 +21,22 @@ const DUMMY_DATA = [
   ,
   {
     id: 'c4',
-    title: 'website'
+    title: 'website2'
   }
   ,
   {
     id: 'c5',
-    title: 'website'
+    title: 'FTP'
   }
   ,
   {
     id: 'c6',
-    title: 'website'
+    title: 'voip'
   }
   ,
   {
     id: 'c7',
-    title: 'website'
+    title: 'reboot'
   }
 ];
 
