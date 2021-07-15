@@ -1,4 +1,8 @@
-# My React.js playground to learn and grow my skills
+# My React.js server status frontend
+
+needs the backend node.js server to work
+
+STILL VERY MUCH A WORK IN PROGRESS. I AM USING THIS TO TEACH MYSELF
 
 
 ## Available Scripts
