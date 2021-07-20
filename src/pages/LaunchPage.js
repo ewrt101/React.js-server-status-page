@@ -1,54 +1,33 @@
-import Card from "../components/launch/Card.js";
+import CardList from "../components/layout/CardList.js";
 
-import classes from './LaunchPage.module.css';
-
-
-const DUMMY_DATA = [
-  {
-    id: 'c1',
-    title: 'Minecraft'
-  }
-  ,
-  {
-    id: 'c2',
-    title: 'Tf2'
-  }
-  ,
-  {
-    id: 'c3',
-    title: 'website'
-  }
-  ,
-  {
-    id: 'c4',
-    title: 'website2'
-  }
-  ,
-  {
-    id: 'c5',
-    title: 'FTP'
-  }
-  ,
-  {
-    id: 'c6',
-    title: 'voip'
-  }
-  ,
-  {
-    id: 'c7',
-    title: 'reboot'
-  }
-];
+import { useState, useEffect } from "react";
 
 function LaunchPage() {
-  return (
-    <div className={classes.gridContainer}>
-      {[DUMMY_DATA.map((card) => {
-        return <Card key={card.id} title={card.title}/>
-      })]}
-      
-    </div>
-  );
+
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedCards, setLoadedCards] = useState([]);
+
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch('http://localhost:3001/command')
+    .then(responce => {
+      return responce.json();
+    }).then(data => {
+      setIsLoading(false);
+      setLoadedCards(data);
+    });
+  }, [setIsLoading, setLoadedCards]);
+
+  
+
+  if (isLoading){
+    return <p>Loading.....</p>
+  }else{
+    return (
+      <CardList data={loadedCards}></CardList>
+     );
+  }
 }
 
 export default LaunchPage;
